@@ -21,22 +21,7 @@ function getComputerChoice() {
     }
 }
 
-/**
- *  Returns the human choice of rock, paper or scissors
- * */
-function getHumanChoice() {
-    // declearing a variable called choice
-    let choice;
-    // continues to ask until rock, paper or scissors is written
-    while (true) {
-        choice = window.prompt("Rock, paper, or scissors?").toLowerCase();
-        if (choice === "rock" || choice === "paper" || choice === "scissors") {
-            return choice;
-        } else {
-            window.alert("Invalid choice! Please enter rock, paper, or scissors.");
-        }
-    }
-}
+
 
 /**
  * This function plays one round of rock paper sciccors

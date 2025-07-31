@@ -1,3 +1,27 @@
+body {
+    margin: 0;
+    background-color: rgb(249, 240, 248)
+}
+
+.box {
+    height: 100px;
+    border-radius: 50px;
+    margin: 50px;
+    background-color: rgb(252, 187, 246);
+    color: white;
+    display: flex;
+    justify-content: center; /* horizontal centering */
+    align-items: center;     /* vertical centering */
+}
+
+h1 {
+    font-family: fantasy;
+    margin: 0;
+}
+
+.info {
+    font-family: fantasy;
+}
 
 #results {
     white-space: pre-wrap;
