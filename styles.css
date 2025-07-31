@@ -12,11 +12,26 @@
     height: 100px; /* The heigth of each image */
     cursor: pointer; /* changes the cursor to a pointer when hovering over */
     margin: 20px; /*  adds pixels space around the image */
-    transition: transform 0.5s; /* smooth animation*/
+}
+
+/* Making a custom pulsating animation */
+@keyframes pulsating {
+    0% {
+        transform: scale(1); /* Normal size in the start */
+    }
+
+    50% {
+        transform: scale(1.5); /* Image grows 1.5x its size */
+    }
+
+    100% {
+        transform: scale(1); /* The image returns to its original size */
+    }
 }
 
 .imageRPS:hover {
-    transform: scale(1.5);
+    /* Only pulsating when hovering over the image */
+    animation: pulsating 1s ease-in-out infinite; /* loops forever */
 }
 
 .imageRPS:disabled {
