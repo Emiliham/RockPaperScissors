@@ -75,10 +75,12 @@ function playRound(humanChoice, computerChoice) {
  * the buttons are disabled when the game is won
  */
 function disableButtons() {
-    document.querySelector("#rock").disabled = true;
-    document.querySelector("#paper").disabled = true;
-    document.querySelector("#scissors").disabled = true;
+    document.querySelectorAll(".imageRPS").forEach(img => {
+        img.style.pointerEvents = "none";
+        img.style.opacity = "0.5";
+    });
 }
+
 
 
 

@@ -6,3 +6,20 @@
 .container {
     text-align: center;
 }
+
+.imageRPS {
+    width: 100px;  /* The width of each image */
+    height: 100px; /* The heigth of each image */
+    cursor: pointer; /* changes the cursor to a pointer when hovering over */
+    margin: 20px; /*  adds pixels space around the image */
+    transition: transform 0.5s; /* smooth animation*/
+}
+
+.imageRPS:hover {
+    transform: scale(1.5);
+}
+
+.imageRPS:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
