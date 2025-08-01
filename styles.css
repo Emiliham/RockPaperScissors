@@ -1,17 +1,23 @@
 body {
     margin: 0;
-    background-color: rgb(249, 240, 248)
+    background-color: rgb(252, 229, 223)
 }
 
-.box {
+.header {
     height: 100px;
     border-radius: 50px;
     margin: 50px;
-    background-color: rgb(252, 187, 246);
+    background-color: rgb(255, 182, 162);
     color: white;
     display: flex;
+
     justify-content: center; /* horizontal centering */
     align-items: center;     /* vertical centering */
+    padding: 0 30px;
+}
+
+.header img {
+    max-height: 150px;  /* prevents it from growing too big */
 }
 
 h1 {
