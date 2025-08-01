@@ -68,3 +68,33 @@ h1 {
     opacity: 0.5;
     pointer-events: none;
 }
+
+/* This makes the whole screen become transperant behind the popop content */
+#screen-cover {
+    /* If this is not here then the popup would appear under everything else, like normal flow*/
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; /* Uses the whole width of the screen*/
+    height: 100%; /* Uses the whole heigth of the screen*/
+    background-color: rgba(0, 0, 0, 0.7); /* The transperant background*/
+    display: none; /* this makes the element hidden*/
+    /* these under scenters the content on the screen*/
+    justify-content: center;
+    align-items: center;
+}
+
+#reveal-box {
+    background-color: rgb(255, 182, 162);
+    border-radius: 50px; /* Makes the box have rounded corners*/
+    padding: 20px; /* The space inside the box around the content in the box*/
+    text-align: center; /* centers t*/
+    color: white; /* Text color*/
+    font-family: fantasy;
+}
+
+#computer-choice {
+    width: 150px;
+    height: 150px;
+    animation: pulsating 1s ease-in-out infinite;
+}

@@ -18,6 +18,42 @@ function getComputerChoice() {
 }
 
 /**
+         * Shows the computer's choice as a popup image
+         */
+function showComputerChoice(computerChoice) {
+    // finding the screen background and the computer-choice
+    var screenCover = document.querySelector("#screen-cover");
+    var popupImage = document.querySelector("#computer-choice");
+    
+    // find out which image to show based on the computers random choice
+    var imageSrc = "";
+    if (computerChoice === "rock") {
+        imageSrc = "./images/stone.png";
+    } else if (computerChoice === "paper") {
+        imageSrc = "./images/paper.png";
+    } else {
+        imageSrc = "./images/scissors.png";
+    }
+    
+    popupImage.src = imageSrc;
+    popupImage.alt = computerChoice;
+    
+    // Show the popup
+    screenCover.style.display = "flex";
+}
+
+/**
+ * Here it hides the whole screencover with popup image
+ * When the parent is removed, all children are also removed
+*/
+function hideComputerChoice() {
+    // here it finds the overlay 
+    var screenCover = document.querySelector("#screen-cover");
+    // then here it hides it
+    screenCover.style.display = "none";
+}
+
+/**
  * This function finds the winner of a round and then updates the scores
  */
 function getRoundWinner(humanChoice, computerChoice) {
@@ -65,8 +101,11 @@ function getResult(roundResultText) {
  * This function plays one round of rock paper scissors
  */
 function playRound(humanChoice, computerChoice) {
+    // First show the computer's choice
+    showComputerChoice(computerChoice);
     var roundResult = getRoundWinner(humanChoice, computerChoice);
     getResult(roundResult);
+    
 }
 
 
@@ -79,6 +118,11 @@ function disableButtons() {
         img.style.opacity = "0.5";
     });
 }
+
+ // Close popup when clicked anywhere
+document.querySelector("#screen-cover").addEventListener("click", function() {
+    hideComputerChoice();
+});
 
 
 // here i add eventlisteners to each button/image
