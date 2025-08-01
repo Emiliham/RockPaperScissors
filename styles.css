@@ -10,7 +10,6 @@ body {
     background-color: rgb(255, 182, 162);
     color: white;
     display: flex;
-
     justify-content: center; /* horizontal centering */
     align-items: center;     /* vertical centering */
     padding: 0 30px;
@@ -82,6 +81,7 @@ h1 {
     /* these under scenters the content on the screen*/
     justify-content: center;
     align-items: center;
+    z-index: 1000;
 }
 
 #reveal-box {
@@ -98,3 +98,21 @@ h1 {
     height: 150px;
     animation: pulsating 1s ease-in-out infinite;
 }
+
+.obs {
+    background-color: rgb(255, 182, 162);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.obs h3 {
+    display: inline-block;
+    margin: 0;
+    animation: pulsating 1s ease-in-out infinite;
+}
+
